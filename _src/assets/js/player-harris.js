@@ -2,16 +2,14 @@
 
 (function () {
 
-  const shoot = (game) => {
-    return {
-      x: _.random(game.board.width),
-      y: _.random(game.board.height)
-    };
-  };
-
   battleship.addPlayer({
     name: 'Harris',
-    shoot: shoot
+    shoot: (data) => {
+      return {
+        x: _.random(data.board.width - 1),
+        y: _.random(data.board.height - 1)
+      };
+    }
   });
 
 }());

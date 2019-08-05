@@ -1,7 +1,12 @@
 {
   "globals": {
     "_": true,
-    "battleship": true
+    "actions": true,
+    "battleship": true,
+    "board": true,
+    "helpers": true,
+    "players": true,
+    "ships": true
   },
   "env": {
     "browser": true,

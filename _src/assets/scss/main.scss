@@ -3,3 +3,45 @@
 body {
   margin: 0;
 }
+
+.hidden {
+  display: none;
+}
+
+.board {
+
+  .row {
+    height: $cellHeight;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .cell {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      width: $cellWidth;
+      height: $cellHeight;
+      background-color: #ccc;
+      border: 1px solid #999;
+
+      &.ship-0 {
+        background-color: blue;
+      }
+
+      &.ship-1 {
+        background-color: green;
+      }
+
+      &.shoot {
+        background-color: black;
+      }
+
+      &.damaged {
+        background-color: red;
+      }
+    }
+
+  }
+
+}
