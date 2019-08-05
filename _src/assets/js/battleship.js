@@ -1,22 +1,20 @@
 'use strict';
 
-const battleship = {};
+const bs = {};
 
-(function () {
-
+(function() {
   // PUBLIC METHODS
 
-  battleship.init = () => {
-    battleship.initNavigator();
-    battleship.initPlayers();
+  bs.init = () => {
+    bs.initNavigator();
+    bs.initPlayers();
   };
 
-  battleship.start = () => {
+  bs.start = () => {
     helpers.logGroup('Starting...');
-    battleship.initBoard();
-    battleship.initShips();
-    battleship.renderBoard();
+    bs.initBoard();
+    bs.initShips();
+    bs.renderBoard();
     helpers.logGroupEnd();
   };
-
-}());
+})();

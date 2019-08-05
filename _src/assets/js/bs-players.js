@@ -1,11 +1,9 @@
 'use strict';
 
-(function () {
-
+(function() {
   // PRIVATE DATA
 
   let players = [];
-  let currentPlayer = 0;
 
   // PRIVATE METHODS
 
@@ -27,17 +25,17 @@
 
   // PUBLIC METHODS
 
-  battleship.addPlayer = (player) => {
+  bs.addPlayer = player => {
     players.push(player);
   };
 
-  battleship.initPlayers = () => {
+  bs.initPlayers = () => {
     shufflePlayers();
     setPlayersId();
     logPlayers();
   };
 
-  battleship.getPlayerIds = () => {
+  bs.getPlayerIds = () => {
     const result = [];
     for (const player of players) {
       result.push(player.id);
@@ -45,12 +43,13 @@
     return result;
   };
 
-  battleship.getCurrentPlayer = () => {
-    return players[currentPlayer];
+  bs.getNextPlayer = playerId => {
+    if (playerId === undefined) {
+      return players[0];
+    } else {
+      const currentPlayer = _.find(players, { id: playerId });
+      const nextPlayerId = (currentPlayer.id + 1) % players.length;
+      return players[nextPlayerId];
+    }
   };
-
-  battleship.setNextPlayer = () => {
-    currentPlayer = (currentPlayer + 1) % players.length;
-  };
-
-}());
+})();

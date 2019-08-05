@@ -1,7 +1,6 @@
 'use strict';
 
-(function () {
-
+(function() {
   // PRIVATE DATA
 
   const ships = [];
@@ -18,7 +17,7 @@
   // create ships methods
 
   const createShips = () => {
-    for (const playerId of battleship.getPlayerIds()) {
+    for (const playerId of bs.getPlayerIds()) {
       ships.push({
         id: ships.length,
         playerId: playerId
@@ -40,20 +39,20 @@
     let incrementX;
     let incrementY;
     if (direction === 'horizontal') {
-      initialX = _.random(battleship.getBoardWidth() - shipLength);
-      initialY = _.random(battleship.getBoardHeight());
+      initialX = _.random(bs.getBoardWidth() - shipLength);
+      initialY = _.random(bs.getBoardHeight());
       incrementX = 1;
       incrementY = 0;
     } else {
-      initialX = _.random(battleship.getBoardWidth());
-      initialY = _.random(battleship.getBoardHeight() - shipLength);
+      initialX = _.random(bs.getBoardWidth());
+      initialY = _.random(bs.getBoardHeight() - shipLength);
       incrementX = 0;
       incrementY = 1;
     }
     for (let idx = 0; idx < shipLength; idx++) {
       positions.push({
-        x: initialX + (incrementX * idx),
-        y: initialY + (incrementY * idx)
+        x: initialX + incrementX * idx,
+        y: initialY + incrementY * idx
       });
     }
     return positions;
@@ -77,22 +76,59 @@
 
   // PUBLIC METHODS
 
-  battleship.initShips = () => {
+  bs.initShips = () => {
     getLengthFromInput();
     createShips();
     createShipsPositions();
     logShips();
   };
 
-  // battleship.getShipIdAt = (x, y) => {
-  //   for (const ship of ships) {
-  //     for (const position of ship.positions) {
-  //       if (position.x === x && position.y === y) {
-  //         return ship.id;
-  //       }
-  //     }
-  //   }
-  //   return '';
-  // };
+  bs.getShipsDataForPlayer = playerId => {
+    const playerShips = [];
+    for (const ship of ships) {
+      if (ship.playerId === playerId) {
+        playerShips.push({
+          positions: ship.positions
+        });
+      }
+    }
+    return playerShips;
+  };
 
-}());
+  bs.isGameOver = () => {
+    for (const ship of ships) {
+      let isGameOver = true;
+      for (const position of ship.positions) {
+        if (!bs.isThereDamageAt(position.x, position.y)) {
+          isGameOver = false;
+        }
+      }
+      if (isGameOver === true) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  bs.isThereShipAt = (x, y) => {
+    for (const ship of ships) {
+      for (const position of ship.positions) {
+        if (position.x === x && position.y === y) {
+          return true;
+        }
+      }
+    }
+    return false;
+  };
+
+  bs.getShipIdAt = (x, y) => {
+    for (const ship of ships) {
+      for (const position of ship.positions) {
+        if (position.x === x && position.y === y) {
+          return ship.id;
+        }
+      }
+    }
+    return '';
+  };
+})();

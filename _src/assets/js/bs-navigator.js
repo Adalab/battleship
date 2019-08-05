@@ -1,20 +1,18 @@
 'use strict';
 
-(function () {
-
+(function() {
   const start = () => {
     helpers.getElement('.js-start').classList.add('hidden');
     helpers.getElement('.js-next').classList.remove('hidden');
     helpers.getElement('.js-previous').classList.remove('hidden');
-    battleship.start();
+    bs.start();
   };
 
   // PUBLIC METHODS
 
-  battleship.initNavigator = () => {
+  bs.initNavigator = () => {
     helpers.listenEvent('.js-start', 'click', start);
-    helpers.listenEvent('.js-next', 'click', battleship.runNextShoot);
-    helpers.listenEvent('.js-previous', 'click', battleship.goPreviousShoot);
+    helpers.listenEvent('.js-next', 'click', bs.fireShoot);
+    helpers.listenEvent('.js-previous', 'click', bs.goPreviousShoot);
   };
-
-}());
+})();

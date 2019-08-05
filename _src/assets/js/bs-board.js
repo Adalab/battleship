@@ -1,7 +1,6 @@
 'use strict';
 
-(function () {
-
+(function() {
   // PRIVATE DATA
 
   const board = {};
@@ -14,15 +13,19 @@
   };
 
   const getCellClassName = (x, y) => {
-    // const shipId = ships.getShipIdAt(x, y);
-    // const shootData = actions.getShootAt(x, y);
+    const shipId = bs.getShipIdAt(x, y);
+    const isThereShoot = bs.isThereShootAt(x, y);
+    const isThereDamage = bs.isThereDamageAt(x, y);
     let className = 'cell';
-    // if (shipId) {
-    //   className += ` ship-${shipId}`;
-    // }
-    // if (shootData) {
-    //   className += ' shoot';
-    // }
+    if (shipId !== '') {
+      className += ` ship ship-${shipId}`;
+    }
+    if (isThereShoot) {
+      className += ' shoot';
+    }
+    if (isThereDamage) {
+      className += ' damaged';
+    }
     return className;
   };
 
@@ -32,25 +35,31 @@
 
   // PUBLIC METHODS
 
-  battleship.initBoard = () => {
+  bs.initBoard = () => {
     getDimensionsFromInputs();
     logBoard();
   };
 
-  battleship.renderBoard = () => {
+  bs.renderBoard = () => {
     let htmlCode = '';
     for (let y = 0; y < board.height; y++) {
       htmlCode += `<li class="row">`;
       for (let x = 0; x < board.width; x++) {
-        htmlCode += `<span class="${getCellClassName(x, y)}"></span>`;
+        htmlCode += `<span class="${getCellClassName(x, y)}">${x},${y}</span>`;
       }
       htmlCode += '</li>';
     }
     helpers.setElementHtml('.js-board', htmlCode);
   };
 
-  battleship.getBoardWidth = () => board.width;
+  bs.getBoardDataForPlayer = () => {
+    return {
+      width: board.width,
+      height: board.height
+    };
+  };
 
-  battleship.getBoardHeight = () => board.height;
+  bs.getBoardWidth = () => board.width;
 
-}());
+  bs.getBoardHeight = () => board.height;
+})();
