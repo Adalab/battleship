@@ -55,7 +55,7 @@ Actualmente el juego está preparado para dos jugadoras. Edita uno de los ficher
 })();
 ```
 
-Como ves, este método `shoot` devuelve las coordenadas X e Y de donde queremos disparar. Ahora mismo este método devuelve coordenadas aleatorias. Lo ideal que no sean aleatorias, lo ideal es programar una inteligencia que haga lo que tú quieras, como por ejemplo:
+Como ves, este método `shoot` devuelve las coordenadas X e Y de donde queremos disparar. Ahora mismo este método devuelve coordenadas aleatorias. Lo ideal es que no sean aleatorias, lo ideal es programar una inteligencia que haga lo que tú quieras, como por ejemplo:
 
 - No disparar sobre tu propio barco.
 - No disparar en un sitio donde ya hayas disparado antes.
@@ -85,4 +85,4 @@ Si quieres echar una mano pídenos acceso a los profes de Adalab para que te hag
 
 ## Documentación técnica
 
-Consulta la documentación técnica del proyecto aquí.
+Consulta la [documentación técnica del proyecto aquí](./DOCUMENTATION.md).

@@ -1,7 +1,7 @@
 {
-	"name": "AdalabWebStarterKit",
-	"version": "2.0.2",
-	"description": "Adalab web starter kit",
+	"name": "Battleship",
+	"version": "0.0.1",
+	"description": "Adalab battleship game",
 	"dependencies": {
 		"browser-sync": "^2.26.3",
 		"del": "^3.0.0",
@@ -23,7 +23,7 @@
 	},
 	"scripts": {
 		"start": "gulp",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"documentation": "onchange -d 100 '_src/**/*.js' -- gulp documentation"
 	},
 	"repository": {
 		"type": "git",
@@ -31,5 +31,10 @@
 	},
 	"author": "Adalab",
 	"license": "MIT",
-	"homepage": "https://github.com/Adalab/Adalab-web-starter-kit"
+	"homepage": "https://github.com/Adalab/Adalab-web-starter-kit",
+	"devDependencies": {
+		"docdash": "^1.1.1",
+		"gulp-jsdoc3": "^2.0.0",
+		"onchange": "^6.0.0"
+	}
 }

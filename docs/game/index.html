@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <title>Adalab Battleship</title>
+        <link rel="icon" href="favicon.png" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    
+    <body>
+        <section>
+            <form>
+                <label>Board width:</label>
+                <input type="number" class="js-board-width-input"
+                value="5" />
+                <br />
+                <label>Board height:</label>
+                <input type="number" class="js-board-height-input"
+                value="5" />
+                <br />
+                <label>Ship length:</label>
+                <input type="number" class="js-ship-length-input"
+                value="4" />
+            </form>
+        </section>
+        <section class="navigator">
+            <button class="js-start">Start</button>
+            <button class="js-previous hidden">Previous</button>
+            <button class="js-next hidden">Next</button>
+        </section>
+        <section class="board js-board"></section>
+        <section class="ships js-ships"></section>
+        <script type="text/javascript" src="./assets/js/main.js"></script>
+        <script type="text/javascript">
+            bs.init();
+        </script>
+    </body>
+
+</html>

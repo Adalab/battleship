@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>bs-players - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="./game" target="_blank" >Play the game</a></h2><h2><a href="https://github.com/Adalab/battleship" target="_blank" >GitHub repository</a></h2><h3>Modules</h3><ul><li><a href="module-battleship.html">battleship</a><ul class='methods'><li data-type='method'><a href="module-battleship.html#~init">init</a></li><li data-type='method'><a href="module-battleship.html#~start">start</a></li></ul></li><li><a href="module-bs-board.html">bs-board</a><ul class='methods'><li data-type='method'><a href="module-bs-board.html#~getDimensionsFromInputs">getDimensionsFromInputs</a></li><li data-type='method'><a href="module-bs-board.html#~getCellClassName">getCellClassName</a></li><li data-type='method'><a href="module-bs-board.html#~logBoard">logBoard</a></li><li data-type='method'><a href="module-bs-board.html#~initBoard">initBoard</a></li><li data-type='method'><a href="module-bs-board.html#~renderBoard">renderBoard</a></li><li data-type='method'><a href="module-bs-board.html#~getBoardDataForPlayer">getBoardDataForPlayer</a></li><li data-type='method'><a href="module-bs-board.html#~getBoardWidth">getBoardWidth</a></li><li data-type='method'><a href="module-bs-board.html#~getBoardHeight">getBoardHeight</a></li></ul></li><li><a href="module-bs-helpers.html">bs-helpers</a><ul class='methods'><li data-type='method'><a href="module-bs-helpers.html#~log">log</a></li><li data-type='method'><a href="module-bs-helpers.html#~logGroup">logGroup</a></li><li data-type='method'><a href="module-bs-helpers.html#~logGroupEnd">logGroupEnd</a></li><li data-type='method'><a href="module-bs-helpers.html#~listenEvent">listenEvent</a></li><li data-type='method'><a href="module-bs-helpers.html#~getElement">getElement</a></li><li data-type='method'><a href="module-bs-helpers.html#~getInputValue">getInputValue</a></li><li data-type='method'><a href="module-bs-helpers.html#~setElementHtml">setElementHtml</a></li></ul></li><li><a href="module-bs-menu.html">bs-menu</a><ul class='methods'><li data-type='method'><a href="module-bs-menu.html#~start">start</a></li><li data-type='method'><a href="module-bs-menu.html#~initMenu">initMenu</a></li></ul></li><li><a href="module-bs-players.html">bs-players</a><ul class='methods'><li data-type='method'><a href="module-bs-players.html#~shufflePlayers">shufflePlayers</a></li><li data-type='method'><a href="module-bs-players.html#~setPlayersId">setPlayersId</a></li><li data-type='method'><a href="module-bs-players.html#~logPlayers">logPlayers</a></li><li data-type='method'><a href="module-bs-players.html#~addPlayer">addPlayer</a></li><li data-type='method'><a href="module-bs-players.html#~initPlayers">initPlayers</a></li><li data-type='method'><a href="module-bs-players.html#~getPlayerIds">getPlayerIds</a></li><li data-type='method'><a href="module-bs-players.html#~getPlayerName">getPlayerName</a></li><li data-type='method'><a href="module-bs-players.html#~getNextPlayer">getNextPlayer</a></li></ul></li><li><a href="module-bs-ships.html">bs-ships</a><ul class='methods'><li data-type='method'><a href="module-bs-ships.html#~getLengthFromInput">getLengthFromInput</a></li><li data-type='method'><a href="module-bs-ships.html#~createShips">createShips</a></li><li data-type='method'><a href="module-bs-ships.html#~createShipsPositions">createShipsPositions</a></li><li data-type='method'><a href="module-bs-ships.html#~logShips">logShips</a></li><li data-type='method'><a href="module-bs-ships.html#~initShips">initShips</a></li><li data-type='method'><a href="module-bs-ships.html#~getShipsDataForPlayer">getShipsDataForPlayer</a></li><li data-type='method'><a href="module-bs-ships.html#~isGameOver">isGameOver</a></li><li data-type='method'><a href="module-bs-ships.html#~isThereShipAt">isThereShipAt</a></li><li data-type='method'><a href="module-bs-ships.html#~getShipIdAt">getShipIdAt</a></li></ul></li><li><a href="module-bs-shots.html">bs-shots</a><ul class='methods'><li data-type='method'><a href="module-bs-shots.html#~getNextShot">getNextShot</a></li><li data-type='method'><a href="module-bs-shots.html#~getPlayerShootData">getPlayerShootData</a></li><li data-type='method'><a href="module-bs-shots.html#~getShotsDataForPlayer">getShotsDataForPlayer</a></li><li data-type='method'><a href="module-bs-shots.html#~logShot">logShot</a></li><li data-type='method'><a href="module-bs-shots.html#~logShots">logShots</a></li><li data-type='method'><a href="module-bs-shots.html#~logGameOver">logGameOver</a></li><li data-type='method'><a href="module-bs-shots.html#~fireShot">fireShot</a></li><li data-type='method'><a href="module-bs-shots.html#~goPreviousShot">goPreviousShot</a></li><li data-type='method'><a href="module-bs-shots.html#~isThereShotAt">isThereShotAt</a></li><li data-type='method'><a href="module-bs-shots.html#~isThereDamageAt">isThereDamageAt</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">bs-players</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description">Module that handles game players.</div>
+            
+
+            
+                
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bs-players.js.html">bs-players.js</a>, <a href="bs-players.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="~players"><span class="type-signature">(inner) </span>players<span class="type-signature"> :Array</span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bs-players.js.html">bs-players.js</a>, <a href="bs-players.js.html#line9">line 9</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Variable where we keep the list of players.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~shufflePlayers"><span class="type-signature">(inner) </span>shufflePlayers<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bs-players.js.html">bs-players.js</a>, <a href="bs-players.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Shuffle the players.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~setPlayersId"><span class="type-signature">(inner) </span>setPlayersId<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bs-players.js.html">bs-players.js</a>, <a href="bs-players.js.html#line23">line 23</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Add an id to each player..
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~logPlayers"><span class="type-signature">(inner) </span>logPlayers<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bs-players.js.html">bs-players.js</a>, <a href="bs-players.js.html#line33">line 33</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Log players info in console.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~addPlayer"><span class="type-signature">(inner) </span>addPlayer<span class="signature">(player)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bs-players.js.html">bs-players.js</a>, <a href="bs-players.js.html#line43">line 43</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Add a player to the game.It is called from the players files (_/src/js/players/).
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Player name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>shoot</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Player shoot function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~initPlayers"><span class="type-signature">(inner) </span>initPlayers<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bs-players.js.html">bs-players.js</a>, <a href="bs-players.js.html#line55">line 55</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Init players module. Add an id to the players and shuffle them.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~getPlayerIds"><span class="type-signature">(inner) </span>getPlayerIds<span class="signature">()</span><span class="type-signature"> &rarr; {array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bs-players.js.html">bs-players.js</a>, <a href="bs-players.js.html#line65">line 65</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A list of player ids.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~getPlayerName"><span class="type-signature">(inner) </span>getPlayerName<span class="signature">(PlayerId)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bs-players.js.html">bs-players.js</a>, <a href="bs-players.js.html#line77">line 77</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>PlayerId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Id of the player.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Name of the player.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~getNextPlayer"><span class="type-signature">(inner) </span>getNextPlayer<span class="signature">(PlayerId)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bs-players.js.html">bs-players.js</a>, <a href="bs-players.js.html#line91">line 91</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>PlayerId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Id of the player.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Returns the next player to a given player.If it is not indicated a player, returns the first player.Useful to start a new turn of the game.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Sun Aug 18 2019 21:20:07 GMT+0200 (GMT+02:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>

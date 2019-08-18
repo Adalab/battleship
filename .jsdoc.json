@@ -1,0 +1,22 @@
+{
+  "opts": {
+    "destination": "./docs/",
+    "template": "node_modules/docdash",
+    "encoding": "utf8"
+  },
+  "docdash": {
+    "sort": false,
+    "search": true,
+    "typedefs": true,
+    "menu": {
+      "Play the game": {
+        "href": "./game",
+        "target": "_blank"
+      },
+      "GitHub repository": {
+        "href": "https://github.com/Adalab/battleship",
+        "target": "_blank"
+      }
+    }
+  }
+}
