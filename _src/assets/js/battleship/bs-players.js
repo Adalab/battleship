@@ -43,6 +43,14 @@
     return result;
   };
 
+  bs.getPlayerName = playerId => {
+    for (const player of players) {
+      if (player.id === playerId) {
+        return player.name;
+      }
+    }
+  };
+
   bs.getNextPlayer = playerId => {
     if (playerId === undefined) {
       return players[0];

@@ -41,10 +41,11 @@
 
   const logShoot = shoot => {
     const isThereDamage = bs.isThereDamageAt(shoot.x, shoot.y);
+    const playerName = bs.getPlayerName(shoot.playerId);
     if (isThereDamage) {
-      helpers.log(`Player #${shoot.playerId} shot: (${shoot.x}, ${shoot.y}) and hit`);
+      helpers.log(`${playerName} (#${shoot.playerId}) shot: (${shoot.x}, ${shoot.y}) and hit`);
     } else {
-      helpers.log(`Player #${shoot.playerId} shot: (${shoot.x}, ${shoot.y}) and failed`);
+      helpers.log(`${playerName} (#${shoot.playerId}) shot: (${shoot.x}, ${shoot.y}) and failed`);
     }
   };
 
