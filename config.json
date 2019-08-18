@@ -17,7 +17,7 @@
   },
   "js": {
     "src": [
-      "_src/assets/js/*.js"
+      "_src/assets/js/**/*.js"
     ],
     "dest": "public/assets/js/",
     "dist": "docs/assets/js/"
