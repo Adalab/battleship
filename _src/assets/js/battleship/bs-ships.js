@@ -39,13 +39,13 @@
     let incrementX;
     let incrementY;
     if (direction === 'horizontal') {
-      initialX = _.random(bs.getBoardWidth() - shipLength);
-      initialY = _.random(bs.getBoardHeight());
+      initialX = _.random(0, bs.getBoardWidth() - shipLength);
+      initialY = _.random(0, bs.getBoardHeight() - 1);
       incrementX = 1;
       incrementY = 0;
     } else {
-      initialX = _.random(bs.getBoardWidth());
-      initialY = _.random(bs.getBoardHeight() - shipLength);
+      initialX = _.random(0, bs.getBoardWidth() - 1);
+      initialY = _.random(0, bs.getBoardHeight() - shipLength);
       incrementX = 0;
       incrementY = 1;
     }
