@@ -5,8 +5,8 @@
     name: 'Wonder woman',
     shoot: data => {
       return {
-        x: _.random(data.board.width - 1),
-        y: _.random(data.board.height - 1)
+        x: Math.floor(Math.random() * data.board.width - 1),
+        y: Math.floor(Math.random() * data.board.height - 1)
       };
     }
   });
