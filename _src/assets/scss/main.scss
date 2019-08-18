@@ -46,6 +46,26 @@ body {
         border-color: #0f9d58;
       }
 
+      &.ship-2 {
+        background-color: #fbbc05;
+        border-color: #fbbc05;
+      }
+
+      &.ship-3 {
+        background-color: #ff8c00;
+        border-color: #ff8c00;
+      }
+
+      &.ship-4 {
+        background-color: #00ff00;
+        border-color: #00ff00;
+      }
+
+      &.ship-6 {
+        background-color: #ee82ee;
+        border-color: #ee82ee;
+      }
+
       &.damaged {
         background-color: #db4437;
         color: white;
