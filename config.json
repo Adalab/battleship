@@ -17,7 +17,9 @@
   },
   "js": {
     "src": [
-      "_src/assets/js/**/*.js"
+      "_src/assets/js/libs/*.js",
+      "_src/assets/js/battleship/*.js",
+      "_src/assets/js/players/*.js"
     ],
     "dest": "public/assets/js/",
     "dist": "docs/assets/js/"
